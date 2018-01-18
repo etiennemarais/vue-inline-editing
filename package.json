@@ -1,0 +1,21 @@
+{
+  "name": "inline-editing",
+  "version": "0.1.0",
+  "description": "A playground repo to test out dynamic vuejs components specifically aimed at inline editing content using a rich test editor ",
+  "main": "index.js",
+  "author": "Etienne Marais <hello@etiennemarais.co.za>",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.6.2",
+    "cross-env": "^5.1.3",
+    "http-server": "^0.11.1",
+    "laravel-mix": "^1.7.2",
+    "vue": "^2.5.13"
+  },
+  "scripts": {
+    "webpack": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "start": "npm run dev & http-server public/"
+  }
+}

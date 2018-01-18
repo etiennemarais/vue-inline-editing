@@ -1,0 +1,33 @@
+# editorconfig.org
+root = true
+
+[*]
+ end_of_line = lf
+ insert_final_newline = true
+
+[*.{js,php,css,sass,less,json,scss,html,blade.php,vue,mjml,mustache}]
+ charset = utf-8
+ indent_style = space
+ indent_size = 4
+ tab_width = 4
+ trim_trailing_whitespace = true
+
+[Makefile]
+ indent_style = tab
+ indent_size = 2
+ tab_width = 2
+
+[bash,*.yml]
+indent_style = space
+indent_size = 2
+tab_width = 2
+trim_trailing_whitespace = true
+
+[{node_modules,vendor,bower_components}/**]
+ indent_style = ignore
+ indent_size = ignore
+ end_of_line = ignore
+ charset = ignore
+ trim_trailing_whitespace = ignore
+ insert_final_newline = ignore
+ spaces_around_operators = ignore
