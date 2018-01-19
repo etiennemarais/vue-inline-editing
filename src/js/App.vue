@@ -10,6 +10,12 @@
                         </div>
                     </div>
                     <div class="columns">
+                        <div class="column is-full has-text-centered">
+                            <a class="github-button" href="https://github.com/etiennemarais/vue-inline-editing/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork etiennemarais/vue-inline-editing on GitHub">Fork</a>
+                            <a class="github-button" href="https://github.com/etiennemarais/vue-inline-editing" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star etiennemarais/vue-inline-editing on GitHub">Star</a>
+                        </div>
+                    </div>
+                    <div class="columns">
                         <div class="column is-full">
                             <h4 class="title is-4">Demo</h4>
                         </div>
@@ -30,6 +36,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="bottom">&nbsp;</div>
+            <div class="columns">
+                <div class="column is-12">
+                    <p class="love has-text-centered">Made with <span class="icon"><i class="fa fa-heart"></i></span> in Cape Town by <a href="https://twitter.com/etbal">Etienne Marais</a></p>
                 </div>
             </div>
             <div class="bottom">&nbsp;</div>
