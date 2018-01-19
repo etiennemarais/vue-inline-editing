@@ -11578,6 +11578,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -11590,15 +11605,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             content: "This is the initial paragraph to render and if you click on this you should be able to edit it",
             isBeingEdited: false,
+            hovered: false,
             customToolbar: [['bold', 'italic', 'underline'], [{ 'list': 'ordered' }, { 'list': 'bullet' }]]
         };
     },
 
     methods: {
-        init: function init() {}
-    },
-    created: function created() {
-        this.init();
+        hover: function hover() {
+            this.hovered = !this.hovered;
+        }
     }
 });
 
@@ -11620,15 +11635,16 @@ var render = function() {
     _c("div", { staticClass: "container is-fluid" }, [
       _c("div", { staticClass: "columns" }, [
         _c("div", { staticClass: "column is-12" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
           _c("div", { staticClass: "columns" }, [
             _c("div", { staticClass: "column is-full" }, [
-              _c("h1", { staticClass: "title is-1" }, [
-                _vm._v("Inline components")
-              ]),
-              _vm._v(" "),
               _vm.isBeingEdited
                 ? _c(
                     "div",
+                    { staticClass: "has-text-left" },
                     [
                       _c("vue-editor", {
                         attrs: { editorToolbar: _vm.customToolbar },
@@ -11644,10 +11660,11 @@ var render = function() {
                       _c(
                         "a",
                         {
-                          staticClass: "button",
+                          staticClass: "button is-dark is-normal save-me",
                           on: {
                             click: function($event) {
-                              _vm.isBeingEdited = false
+                              ;(_vm.isBeingEdited = false),
+                                (_vm.hovered = false)
                             }
                           }
                         },
@@ -11659,13 +11676,25 @@ var render = function() {
                 : _c(
                     "div",
                     {
+                      staticClass: "paragraph",
+                      class: {
+                        "text-hovered": _vm.hovered,
+                        "text-not-hovered": !_vm.hovered
+                      },
                       on: {
                         click: function($event) {
                           _vm.isBeingEdited = true
-                        }
+                        },
+                        mouseout: _vm.hover,
+                        mouseover: _vm.hover
                       }
                     },
-                    [_c("p", { domProps: { innerHTML: _vm._s(_vm.content) } })]
+                    [
+                      _c("p", {
+                        staticClass: "inline",
+                        domProps: { innerHTML: _vm._s(_vm.content) }
+                      })
+                    ]
                   )
             ])
           ])
@@ -11676,7 +11705,34 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "columns" }, [
+      _c("div", { staticClass: "column is-full" }, [
+        _c("h1", { staticClass: "title is-1" }, [_vm._v("Inline components")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Inline editing a piece of text is a tremendous productivity booster for users of your site."
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "columns" }, [
+      _c("div", { staticClass: "column is-full" }, [
+        _c("h4", { staticClass: "title is-4" }, [_vm._v("Demo")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

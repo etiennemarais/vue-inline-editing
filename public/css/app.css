@@ -7976,7 +7976,8 @@ a.tag:hover {
   padding: 1.5rem;
 }
 
-.m-t-2xl {
+.m-t-2xl,
+.save-me {
   margin-top: 1.5rem;
 }
 
@@ -8279,6 +8280,19 @@ h6 {
 
 .text-is-small {
   font-size: 0.875rem;
+}
+
+.paragraph.text-hovered {
+  margin: -1.0625rem;
+  border: 1px dashed #e8e8e8;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.paragraph.text-not-hovered {
+  margin: -1rem;
+  border: none;
+  padding: 1rem;
 }
 
 .divider {

@@ -30,6 +30,25 @@ h1, h2, h3, h4, h5, h6 {
     font-size: $text-sm;
 }
 
+.save-me {
+    @extend .m-t-2xl;
+}
+
+.paragraph {
+    &.text-hovered {
+        margin: -1.0625rem; // 1px = 0.0625rem. Have to add the border with to the margin so text won't jump
+        border: 1px dashed $grey-lightest;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    &.text-not-hovered {
+        margin: -1rem;
+        border: none;
+        padding: 1rem;
+    }
+}
+
 .divider {
     @extend hr;
     @extend .m-t-5xl;
